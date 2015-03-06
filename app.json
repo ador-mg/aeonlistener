@@ -1,7 +1,7 @@
 {
   "name": "AEON Listener",
   "description": "node.js app for listening to AEON",
-  "repository": "",
+  "repository": "https://github.com/ador75/aeonlistener.git",
   "logo": "http://node-js-sample.herokuapp.com/node.svg",
   "keywords": ["AEON"]
 }

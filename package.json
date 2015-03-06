@@ -4,9 +4,21 @@
   "description": "Simple listener of AEON messages",
   "main": "app.js",
   "author": "",
-  "private": true,
-  "license": "BSD",
+  "license": "MIT",
+  "scripts": {
+    "start": "node app.js ls"
+  },
   "dependencies": {
     "aeonsdk-node": "0.2.1"
-  }
+  },
+  "engines": {
+    "node": "0.12.x"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ador75/aeonlistener"
+  },
+  "keywords": [
+    "aeon"
+  ]
 }
