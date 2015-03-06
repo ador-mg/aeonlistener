@@ -1,0 +1,12 @@
+{
+  "name": "aeon.listener",
+  "version": "0.0.1",
+  "description": "Simple listener of AEON messages",
+  "main": "app.js",
+  "author": "",
+  "private": true,
+  "license": "BSD",
+  "dependencies": {
+    "aeonsdk-node": "0.2.1"
+  }
+}
