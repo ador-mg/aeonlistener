@@ -11,6 +11,9 @@
   "dependencies": {
     "aeonsdk-node": "0.2.1"
   },
+  "dependencies": {
+    "winston": "0.9.0"
+  },
   "engines": {
     "node": "0.12.x"
   },
