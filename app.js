@@ -26,6 +26,8 @@
 
 //var AeonSDK = require('../lib/aeonSDK.js');
 var AeonSDK = require('aeonsdk-node');
+// Load the http module to create an http server.
+var http = require('http');
 
 function guid() {
   function s4() {
@@ -109,17 +111,20 @@ console.log("Ok, we are subscribed, waiting for messages");
 
 // }, 3000);
 
-// Load the http module to create an http server.
-var http = require('http');
+try{
+  // Configure our HTTP server to respond with Hello World to all requests.
+  var server = http.createServer(function (request, response) {
+    response.writeHead(200, {"Content-Type": "text/plain"});
+    response.end("Hello World\n");
+  });
 
-// Configure our HTTP server to respond with Hello World to all requests.
-var server = http.createServer(function (request, response) {
-  response.writeHead(200, {"Content-Type": "text/plain"});
-  response.end("Hello World\n");
-});
+  // Listen on port 8000, IP defaults to 127.0.0.1
+  server.listen(process.env.PORT || 3000);
 
-// Listen on port 8000, IP defaults to 127.0.0.1
-server.listen(80);
-
-// Put a friendly message on the terminal
-console.log("Server running at http://127.0.0.1:80/");
+  // Put a friendly message on the terminal
+  console.log("Server running at http://127.0.0.1:80/");
+}
+catch(er)
+{
+  console.log(er);
+}
